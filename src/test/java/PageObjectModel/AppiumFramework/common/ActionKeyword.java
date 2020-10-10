@@ -12,6 +12,7 @@ import io.appium.java_client.MobileElement;
 public class ActionKeyword extends ObjectConverter
 {
 
+	/* Method to tap the object in the screen*/
 	public static void Tap(String [] Object)
 	{
 		try
@@ -23,7 +24,7 @@ public class ActionKeyword extends ObjectConverter
 			System.out.println("Exception occured while tapping an Element "+Object[4]);
 		}
 	}
-	
+	/* Method to get the text from object in the screen*/
 	public static String getText(String [] Object)
 	{
 		String textvalue="";
@@ -37,7 +38,7 @@ public class ActionKeyword extends ObjectConverter
 		}
 		return textvalue;
 	}
-	
+	/* Method to Enter the text from object in the screen*/
 	public static void enterText(String [] Object,String valueToEnter)
 	{
 		try
@@ -50,7 +51,7 @@ public class ActionKeyword extends ObjectConverter
 			System.out.println("Exception occured while enterin text in the Element "+Object[4]);
 		}	
 	}
-	
+	/* Method to Tap the screen by index values from given object in the screen*/
 	public static void tapbyIndex(String [] Object, int index)
 	{
 		try
@@ -63,6 +64,7 @@ public class ActionKeyword extends ObjectConverter
 			System.out.println("Exception occured while tapping the Element "+Object[4]+" using Index "+index);
 		}
 	}
+	/* Method to get the list of array objectin the screen*/
 
 	public static ArrayList<String> getvaluesinList(String []Object)
 	{
@@ -86,6 +88,9 @@ public class ActionKeyword extends ObjectConverter
 	}
 	
 	@SuppressWarnings("unchecked")
+	
+	/* Method to switch the screen into web view mode*/
+
 	public static void switchToWebView()
 	{
 		Set<String> contextNames = Driver.driver.getContextHandles();
@@ -96,6 +101,7 @@ public class ActionKeyword extends ObjectConverter
 		sleep(5000);
 	}
 	
+	/* Method to navigate to back screen*/
 	public static void navigateBack()
 	{
 		Driver.driver.navigate().back();
@@ -112,7 +118,7 @@ public class ActionKeyword extends ObjectConverter
 			System.out.println("Exception occured while retrieving text from an Element "+timeinMS);
 		}
 	}
-	
+	/* Method to click an object using the Java script executor*/
 	public static void clickusingJS(String Object)
 	{
 		try
@@ -126,7 +132,7 @@ public class ActionKeyword extends ObjectConverter
 			System.out.println("Exception occured while retrieving text from an Element "+e.getMessage());
 		}
 	}
-	
+	/* Method to wait for the particular element to appear on the screen*/
 	public static void waitForObjectToLoad(String[] Object,int seconds)
 	{
 		try
@@ -141,6 +147,8 @@ public class ActionKeyword extends ObjectConverter
 		}	
 		
 	}
+	
+	/* Method to perform scroll action till the element gets loaded */
 	public static void scrolldown(String text)
 	{
 		try
@@ -154,6 +162,8 @@ public class ActionKeyword extends ObjectConverter
 
 		}
 	}
+	
+	/* Method to select any Element from the list on the screen*/
 	public static void selectAnyItemfromList(String[] Object)
 	{
 		try
@@ -167,6 +177,8 @@ public class ActionKeyword extends ObjectConverter
 		}	
 		
 	}
+	
+	/* Method to verify whether the element is appearing on the screen*/
 	public static boolean verfyIfObjectIsPresent(String[] Object)
 	{
 		boolean isElementFound=false;

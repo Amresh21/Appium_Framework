@@ -1,5 +1,7 @@
 package PageObjectModel.AppiumFramework.test;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import PageObjectModel.AppiumFramework.ObjectRepository.LoginScreen;
 import PageObjectModel.AppiumFramework.PageObjects.AddressPage;
@@ -8,14 +10,10 @@ import PageObjectModel.AppiumFramework.PageObjects.LoginPage;
 import PageObjectModel.AppiumFramework.PageObjects.PDPPage;
 import PageObjectModel.AppiumFramework.PageObjects.SearchPage;
 import PageObjectModel.AppiumFramework.common.Driver;
-import PageObjectModel.AppiumFramework.common.ReadData;
-
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
 
 public class TC_001_DeviceSearchandA2C {
  
- @BeforeTest
+ @Before
  public void beforeTest() throws Exception 
  {
 	  ReadData.fromExternalSource();
@@ -41,7 +39,7 @@ public class TC_001_DeviceSearchandA2C {
 	  
   }
  
-  @AfterTest
+  @After
   public void afterTest()
   {
 	  Driver.quitDriver();
